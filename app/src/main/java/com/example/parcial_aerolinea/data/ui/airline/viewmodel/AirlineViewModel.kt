@@ -1,4 +1,4 @@
-package com.example.parcial_aerolinea.data.ui.viewmodel
+package com.example.parcial_aerolinea.data.ui.airline.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
