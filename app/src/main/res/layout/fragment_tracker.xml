@@ -6,7 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".data.ui.airline.tracker.TrackerFragment">
 
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.parcial_aerolinea.data.ui.airline.viewmodel.AirlineViewModel" />
+    </data>
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
 
 
 </layout>

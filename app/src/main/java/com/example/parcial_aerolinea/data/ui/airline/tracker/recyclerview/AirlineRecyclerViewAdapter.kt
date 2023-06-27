@@ -7,12 +7,12 @@ import java.text.FieldPosition
 class AirlineRecyclerViewAdapter {
 
 }
-//Seguire despues de terminar las vistas
-//fun getItemCount(): Int{
-//    return airlines.size
-//}
-//
-//fun setData(airlinesList: List<AirlineModel>){
-//    airlines.clear()
-//    airlines.addAll(airlinesList)
-//}
+
+fun getItemCount(): Int{
+    return airlines.size
+}
+
+fun setData(airlinesList: List<AirlineModel>){
+    airlines.clear()
+    airlines.addAll(airlinesList)
+}

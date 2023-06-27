@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.parcial_aerolinea.R
+import com.example.parcial_aerolinea.data.ui.airline.viewmodel.AirlineViewModel
 
 
 class TrackerFragment : Fragment() {
