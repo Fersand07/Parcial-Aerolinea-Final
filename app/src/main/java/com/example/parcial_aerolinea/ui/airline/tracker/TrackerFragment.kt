@@ -1,5 +1,6 @@
 package com.example.parcial_aerolinea.ui.airline.tracker
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -26,7 +27,8 @@ class TrackerFragment : Fragment() {
     private lateinit var binding: FragmentTrackerBinding
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentTrackerBinding.inflate(inflater, container, false)
@@ -49,6 +51,7 @@ class TrackerFragment : Fragment() {
         findNavController().navigate(R.id.action_trackerFragment_to_airlineFragment)
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     private fun displayAirlines() {
         adapter.setData(airlineViewModel.getAirlines())
         adapter.notifyDataSetChanged()

@@ -14,7 +14,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/teal_200"
+        android:background="@color/background_color"
         tools:context=".ui.airline.newairline.NewAirlineFragment">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -28,7 +28,7 @@
                 android:layout_marginTop="16dp"
                 android:gravity="center"
                 android:text="New Airline"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="42sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -53,7 +53,7 @@
                     android:id="@+id/name_edit_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/material_dynamic_tertiary80"
+                    android:background="@color/card_color"
                     android:text="@={viewmodel.name}"
                     android:textColor="@color/black" />
 
@@ -76,9 +76,9 @@
                     android:id="@+id/country_edit_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/material_dynamic_tertiary80"
+                    android:background="@color/card_color"
                     android:text="@={viewmodel.country}"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/black" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -99,7 +99,7 @@
                     android:id="@+id/status_edit_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/material_dynamic_tertiary80"
+                    android:background="@color/card_color"
                     android:text="@={viewmodel.status}"
                     android:textColor="@color/black" />
 
@@ -110,7 +110,7 @@
                 android:id="@+id/submit_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/material_dynamic_tertiary90"
+                android:backgroundTint="@color/secondary_color"
                 android:onClick="@{() -> viewmodel.createAirline()}"
                 android:text="Submit"
                 android:textColor="@color/black"

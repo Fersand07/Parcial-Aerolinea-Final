@@ -8,7 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import com.example.parcial_aerolinea.R
 import com.example.parcial_aerolinea.databinding.FragmentNewAirlineBinding
 import com.example.parcial_aerolinea.ui.airline.viewmodel.AirlineViewModel
 

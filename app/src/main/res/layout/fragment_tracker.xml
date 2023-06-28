@@ -15,7 +15,7 @@
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/teal_200">
+        android:background="@color/background_color">
 
         <TextView
             android:id="@+id/textView"
@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Aerolineas"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="42sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -52,7 +52,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:backgroundTint="@color/material_dynamic_neutral70"
+            android:backgroundTint="@color/secondary_color"
             android:src="@drawable/airline_add_image"
             app:borderWidth="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
