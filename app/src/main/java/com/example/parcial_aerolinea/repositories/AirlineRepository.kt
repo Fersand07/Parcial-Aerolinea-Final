@@ -1,4 +1,4 @@
-package com.example.parcial_aerolinea.data.repositories
+package com.example.parcial_aerolinea.repositories
 
 import com.example.parcial_aerolinea.data.model.AirlineModel
 

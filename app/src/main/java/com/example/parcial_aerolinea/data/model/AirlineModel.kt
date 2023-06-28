@@ -1,6 +1,7 @@
 package com.example.parcial_aerolinea.data.model
 
-class AirlineModel (
+data class AirlineModel (
     val name: String,
-    val country: String
+    val country: String,
+    val status: String
         )

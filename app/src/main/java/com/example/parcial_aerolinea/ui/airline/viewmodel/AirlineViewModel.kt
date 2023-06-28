@@ -1,4 +1,4 @@
-package com.example.parcial_aerolinea.data.ui.airline.viewmodel
+package com.example.parcial_aerolinea.ui.airline.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -7,7 +7,7 @@ import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
 import com.example.parcial_aerolinea.AirlineReviewerApplication
 import com.example.parcial_aerolinea.data.model.AirlineModel
-import com.example.parcial_aerolinea.data.repositories.AirlineRepository
+import com.example.parcial_aerolinea.repositories.AirlineRepository
 
 class AirlineViewModel (private val repository: AirlineRepository) : ViewModel(){
     var name = MutableLiveData("")
@@ -17,7 +17,7 @@ class AirlineViewModel (private val repository: AirlineRepository) : ViewModel()
 
     fun getAirlines() = repository.getAirlines()
 
-    private fun addAirlines(airline: AirlineModel) = repository.addAirlines(airline)
+    fun addAirlines(airline: AirlineModel) = repository.addAirlines(airline)
 
     fun createAirline(){
         if (!validateData()){
@@ -26,7 +26,8 @@ class AirlineViewModel (private val repository: AirlineRepository) : ViewModel()
         }
         val airline = AirlineModel(
             name.value!!,
-            country.value!!
+            country.value!!,
+            status.value!!
         )
 
         addAirlines(airline)
@@ -39,6 +40,7 @@ class AirlineViewModel (private val repository: AirlineRepository) : ViewModel()
         when {
             name.value.isNullOrEmpty() -> return false
             country.value.isNullOrEmpty() -> return false
+            status.value.isNullOrEmpty() -> return false
         }
         return true
     }
@@ -46,6 +48,7 @@ class AirlineViewModel (private val repository: AirlineRepository) : ViewModel()
     fun clearData(){
         name.value = ""
         country.value = ""
+        status.value = ""
     }
 
     fun clearStatus(){
@@ -55,6 +58,7 @@ class AirlineViewModel (private val repository: AirlineRepository) : ViewModel()
     fun setSelectedAirline(airline: AirlineModel){
         name.value = airline.name
         country.value = airline.country
+        status.value = airline.status
     }
 
     companion object{

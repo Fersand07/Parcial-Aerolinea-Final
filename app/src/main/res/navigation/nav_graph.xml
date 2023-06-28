@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/trackerFragment">
+    <fragment
+        android:id="@+id/trackerFragment"
+        android:name="com.example.parcial_aerolinea.ui.airline.tracker.TrackerFragment"
+        android:label="fragment_tracker"
+        tools:layout="@layout/fragment_tracker" >
+        <action
+            android:id="@+id/action_trackerFragment_to_newAirlineFragment"
+            app:destination="@id/newAirlineFragment" />
+        <action
+            android:id="@+id/action_trackerFragment_to_airlineFragment"
+            app:destination="@id/airlineFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newAirlineFragment"
+        android:name="com.example.parcial_aerolinea.ui.airline.newairline.NewAirlineFragment"
+        android:label="fragment_new_airline"
+        tools:layout="@layout/fragment_new_airline" />
+    <fragment
+        android:id="@+id/airlineFragment"
+        android:name="com.example.parcial_aerolinea.ui.airline.AirlineFragment"
+        android:label="AirlineFragment" />
+</navigation>
